@@ -22,6 +22,9 @@ app.use(express.json());
  })();
 
  // Routes
+ app.use('/',(req,res)=>{
+  res.json({msg:"Hello"})
+ })
 app.use('/api/users', userRoutes);
 app.use('/api/health', healthRoutes);
 
